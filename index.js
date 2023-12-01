@@ -1,14 +1,17 @@
 // SET ACTUAL dynamic time / date
 let actualDate = new Date();
-console.log("Actual Date:", actualDate);
+console.log(
+  "Actual Date:",
+  actualDate.toLocaleString("en-GB", { timeZone: "GMT" })
+);
 
 // SET target date /
-let targetDate = new Date();
-targetDate.setDate(25);
-targetDate.setHours(12); // SET the target time (hours)
-targetDate.setMinutes(30); // SET the target time (minutes)
-targetDate.setSeconds(0); // SET the target time (seconds)
-console.log("Target Date:", targetDate);
+// SET target date to midnight on 24/12/2023
+let targetDate = new Date("2023-12-25T00:00:00");
+console.log(
+  "Target Date:",
+  targetDate.toLocaleString("en-GB", { timeZone: "GMT" })
+);
 
 // Declare HTML for output
 const output = document.getElementById("output");
@@ -45,7 +48,7 @@ function updateCountdown() {
     </div>
     <div class="box-el seconds">
         <p>${differenceSeconds}</p>
-        <P>seconds</P>
+        <P>Seconds</P>
     </div>
   </div>
   `;
@@ -56,17 +59,27 @@ const result = setInterval(updateCountdown, 1000);
 
 // ***********
 
+let hohoho = new Audio("/hohoho.mp3");
+
 // Santa email function
 const submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", submitWishList);
 
 function submitWishList(e) {
+  const wishlistValue = document.getElementById("wishlist");
   e.preventDefault();
-  const modal = document.querySelector(".modal");
-  modal.classList.toggle("toggle");
-  clearInputValue();
-  console.log("submitted!");
+  if (wishlistValue.value === "") {
+    alert("Please add something to the list!");
+  } else {
+    setTimeout(function () {
+      const modal = document.querySelector(".modal");
+      modal.classList.toggle("toggle");
+      hohoho.play();
+      clearInputValue();
+      console.log("submitted!");
+    }, 1000); // 1000 milliseconds = 1 second
+  }
 }
 
 // Close modal function

@@ -106,37 +106,43 @@ header h1 {
 }
 
 .output-box-el {
-  margin-top: 2em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: 3em;
 }
 
 .output-box-el p {
+  padding-top: 0.8em;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #ce2828;
+  color: white;
+  text-shadow: -1px 1px 19px rgba(0, 0, 0, 0.7);
 }
 
 .email-output-el {
-  margin-top: 4em;
+  margin-top: 8em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: 3em;
+}
+
+.box-el {
+  margin-top: 2em;
 }
 
 textarea {
   max-width: 100%;
   height: auto;
-  border: none;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 1em;
 }
 
-input[type="submit"] {
+button {
   background-color: #159e4c;
   border: none;
   border-radius: 10px;
@@ -147,18 +153,19 @@ input[type="submit"] {
   box-shadow: 0 7px #999;
 }
 
-input[type="submit"]:hover {
+button:hover {
   transition: 0.4s;
   background-color: darkgreen;
 }
 
-input[type="submit"]:active {
+button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 form h2 {
   font-size: 2rem;
+  padding-bottom: 0.5em;
   text-align: center;
   color: white;
   font-family: "Mountains of Christmas", serif;
@@ -188,10 +195,16 @@ form h2 {
 
 .modal {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: yellow;
   border-radius: 10px;
   padding: 1em;
   z-index: 2000;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 600px; /* Add a max-width if necessary */
 }
 
 #close-el {
@@ -214,11 +227,30 @@ form h2 {
 }
 
 footer {
-  margin-top: 3em;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: rgba(189, 211, 225, 0.6);
+}
+
+.social-area {
+  display: flex;
+  gap: 2em;
 }
 
 .toggle {
   display: block;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
