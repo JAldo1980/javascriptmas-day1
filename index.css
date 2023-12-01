@@ -205,6 +205,9 @@ form h2 {
   z-index: 2000;
   width: 80%; /* Adjust the width as needed */
   max-width: 600px; /* Add a max-width if necessary */
+  -webkit-box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.75);
 }
 
 #close-el {
@@ -224,11 +227,22 @@ form h2 {
 
 .inner-modal {
   margin-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+}
+
+.inner-modal p {
+  margin-top: 1em;
+}
+
+.inner-modal h2 {
+  font-size: 2rem;
+  font-family: "Mountains of Christmas", serif;
 }
 
 footer {
   margin-top: 4em;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -265,5 +279,8 @@ a {
   .output-box-el {
     justify-content: center;
     flex-direction: row;
+  }
+  footer {
+    margin-top: 12em;
   }
 }

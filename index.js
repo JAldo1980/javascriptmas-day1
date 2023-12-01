@@ -70,7 +70,7 @@ function submitWishList(e) {
   const wishlistValue = document.getElementById("wishlist");
   e.preventDefault();
   if (wishlistValue.value === "") {
-    alert("Please add something to the list!");
+    alert("Please add something to Santa's list!");
   } else {
     setTimeout(function () {
       const modal = document.querySelector(".modal");
