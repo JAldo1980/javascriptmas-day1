@@ -1,5 +1,6 @@
 # javascriptmas-day1
 A Christmas countdown timer built with Javascript (see README file for more info).
+Original post on Twitter: https://twitter.com/_JamesCodes
 
 ![countdown](https://github.com/JAldo1980/javascriptmas-day1/assets/80925002/a5ce2a39-7d41-44d5-8030-347ed5079350)
 
